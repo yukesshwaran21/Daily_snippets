@@ -1,0 +1,23 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+        String s=sc.nextLine();
+        
+        HashMap<Character,Integer> m=new HashMap<>();
+        
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            m.put(c,m.getOrDefault(c,0)+1);
+        }
+        
+        for(char i: m.keySet()){
+            if(m.get(i)==1){
+                System.out.print("The first non repeating char: "i);
+                break;
+            }
+        }
+    }
+}
