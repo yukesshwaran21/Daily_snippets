@@ -1,0 +1,39 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+        int n=sc.nextInt();
+        
+        int[] arr=new int[n];
+        
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        
+        int totalsum=0;
+        for(int i=0;i<n;i++){
+            totalsum += arr[i];
+        }
+        int rightsum=totalsum;
+        int leftsum=0;
+        int index=0;
+        boolean b=false;
+        for(int i=0;i<n;i++){
+            rightsum -= arr[i];
+            if(leftsum==rightsum){
+                index=i;
+                b=true;
+            }
+            leftsum += arr[i];
+        }
+        
+        if(b){
+            System.out.println("Index : "+index);
+        }
+        else{
+            System.out.println("-1");
+        }
+    }
+}
