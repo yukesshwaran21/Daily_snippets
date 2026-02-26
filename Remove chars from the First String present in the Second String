@@ -1,0 +1,21 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+        String s1=sc.nextLine();
+        String s2=sc.nextLine();
+        
+        char[] arr1=s1.toCharArray();
+        
+        StringBuilder b=new StringBuilder();
+        
+            for(int j=0;j<arr1.length;j++){
+                if(!s2.contains(String.valueOf(arr1[j]))){
+                    b.append(arr1[j]);
+                }
+            }
+        System.out.print(b.toString());
+    }
+}
