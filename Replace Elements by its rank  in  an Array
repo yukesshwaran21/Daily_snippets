@@ -1,0 +1,31 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+        int n=sc.nextInt();
+        
+        int[] arr=new int[n];
+        int[] copy=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            copy[i]=arr[i];
+        }
+        
+        Arrays.sort(arr);
+        int r=1;
+        Map<Integer,Integer> s=new HashMap<>();
+        for(int i=0;i<n;i++){
+            if(!s.containsKey(arr[i])){
+                s.put(arr[i],r);
+                r++;
+            }
+        }
+        
+        for(int i=0;i<n;i++){
+            System.out.print(s.get(copy[i])+" ");
+        }
+        
+    }
+}
