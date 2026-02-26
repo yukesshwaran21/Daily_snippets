@@ -1,0 +1,53 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+        String s1=sc.nextLine();
+        String s2=sc.nextLine();
+        
+        int[] path={800,600,750,900,1400,1200,1100,1500};
+        
+        String[] des={"TH","GA","IC","HA","TE","LU","NI","CA"};
+        
+        if(!s1.equals(s1.toUpperCase()) || !s2.equals(s2.toUpperCase())){
+            System.out.println("Invalid Input");
+            return;
+        }
+        
+        int d1=0,d2=0;
+        for(int i=0;i<des.length;i++){
+            if(s1.equals(des[i])){
+                d1=i;
+            }
+            if(s2.equals(des[i])){
+                d2=i;
+            }
+        }
+        if(d1==0 && d2==0){
+            System.out.println("Invalid Input");
+            return;
+        }
+        
+        int totaldis=0;
+        for(int i=0;i<path.length;i++){
+            totaldis += path[i];
+        }
+        
+        int start=0;
+        int K=d1;
+        
+        while(K!=d2){
+            start += path[K];
+            K= (K+1)%path.length;
+        }
+        
+        int end=totaldis-start;
+        
+        int final1=Math.min(start,end);
+        
+        double fare=final1*(5.0/1000);
+        System.out.println((int) Math.ceil(fare));
+    }
+}
