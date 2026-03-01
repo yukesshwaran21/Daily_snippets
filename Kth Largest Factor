@@ -1,0 +1,27 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int K = sc.nextInt();
+        int r = sc.nextInt();
+
+        List<Integer> l = new ArrayList<>();
+
+        for(int i = 1; i <= K; i++){
+            if(K % i == 0){
+                l.add(i);
+            }
+        }
+
+        Collections.sort(l, Collections.reverseOrder());
+
+        if(r > l.size()){
+            System.out.println(1);
+        }
+        else{
+            System.out.println(l.get(r - 1));
+        }
+    }
+}
