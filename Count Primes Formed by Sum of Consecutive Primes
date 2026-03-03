@@ -1,0 +1,48 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+        int n=sc.nextInt();
+        
+        int k=2;
+        List<Integer> l=new ArrayList<>();
+        
+        while(k<n){
+            boolean b=true;
+            
+            for(int i=2;i<k;i++){
+                if(k%i == 0){
+                    b=false;
+                    break;
+                }
+            }
+            
+            if(b){
+                l.add(k);
+            }
+            k++;
+        }
+        
+        int sum=l.get(0),c=0;
+        for(int i=0;i<l.size();i++){
+            sum += l.get(i);
+            boolean b=true;
+            
+            if(sum>n) break;
+            
+            for(int j=2;j<sum;j++){
+                if(sum%j == 0){
+                    b=false;
+                    break;
+                } 
+            }
+            
+            if(b){
+                c++;
+            }
+        }
+        System.out.println(c);
+    }
+}
