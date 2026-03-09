@@ -1,0 +1,31 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+        int n=sc.nextInt();
+        
+        int[] arr=new int[n];
+        
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        
+        int m=sc.nextInt();
+        
+        int fin=Integer.MAX_VALUE;
+        for(int i=0;i<=n-m;i++){
+            int min=Integer.MAX_VALUE;
+            int max=Integer.MIN_VALUE;
+            int sum=0;
+            for(int j=i;j<i+m;j++){
+                max=Math.max(max,arr[j]);
+                min=Math.min(min,arr[j]);
+            }
+            sum = max-min;
+            fin=Math.min(fin,sum);
+        }
+        System.out.println(fin);
+    }
+}
