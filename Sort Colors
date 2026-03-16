@@ -1,0 +1,27 @@
+class Solution {
+    public void sortColors(int[] nums) {
+        
+        ArrayList<Integer> l1=new ArrayList<>();
+        ArrayList<Integer> l2=new ArrayList<>();
+        ArrayList<Integer> l3=new ArrayList<>();
+
+        for(int j=0;j<nums.length;j++){
+            if(nums[j]==0){
+                l1.add(nums[j]);
+            }
+            else if(nums[j]==1){
+                l2.add(nums[j]);
+            }
+            else{
+                l3.add(nums[j]);
+            }
+        }
+        l2.addAll(l3);
+        l1.addAll(l2);
+        int arr[]=new int[l1.size()];
+
+        for(int j=0;j<nums.length;j++){
+            nums[j]=l1.get(j);
+        } 
+    }
+}
