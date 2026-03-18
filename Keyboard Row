@@ -1,0 +1,33 @@
+class Solution {
+    public String[] findWords(String[] words) {
+        
+        List<String> l=new ArrayList<>();
+
+        String row1="qwertyuiop";
+        String row2="asdfghjkl";
+        String row3="zxcvbnm";
+        
+        for(int i=0;i<words.length;i++){
+            String c=words[i].toLowerCase();
+
+            boolean b1=true,b2=true,b3=true;
+          
+            for(char b: c.toCharArray()){
+                if(row1.indexOf(b) == -1){
+                    b1=false;
+                }
+                if(row2.indexOf(b) == -1){
+                    b2=false;
+                }
+                if(row3.indexOf(b) == -1){
+                    b3=false;
+                }    
+            }
+
+            if(b1 || b2 || b3){
+                l.add(words[i]);
+            }            
+        }
+        return l.toArray(new String[0]);
+    }
+}
