@@ -1,0 +1,75 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+        int m=sc.nextInt();
+        int n=sc.nextInt();
+        
+        int arr[][] =new int[m][n];
+        
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        
+        if(m<=0 || n<=0){
+            System.out.println("Invalid");
+            return;
+        }
+        
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                if(arr[i][j]<0){
+                    System.out.println("Invalid");
+                    return;
+                }
+            }
+        }
+        
+        int c=0;
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                c++;
+            }
+        }
+        
+        if(c<m*n){
+            System.out.println("Invalid");
+            return;
+        }
+        boolean not=true;
+        for(int i=0;i<m;i++){
+            boolean has=false;
+            for(int j=0;j<n;j++){
+               int k=arr[i][j];
+               boolean b=true;
+               if(k<2){
+                   b=false;
+               }
+               for(int l=2;l<k;l++){
+                   if(k%l==0){
+                       b=false;
+                       break;
+                   }
+               }
+               if(b){
+                   has=true;
+                   break;
+               }
+            }
+            if(!has){
+                   not=false;
+                   break;
+               }
+        }
+        if(not){
+                System.out.print("VALID");
+            }
+            else{
+               System.out.print("INVALID"); 
+            }
+    }
+}
