@@ -1,0 +1,24 @@
+class Solution {
+    public int countConsistentStrings(String allowed, String[] words) {
+        
+        int c=0;
+
+        for(int i=0;i<words.length;i++){
+            boolean b=true;
+            String s=words[i];
+
+            for(int j=0;j<s.length();j++){
+                char v=s.charAt(j);
+                if(!allowed.contains(String.valueOf(v))){
+                    b=false;
+                    break;
+                }
+            }
+
+            if(b){
+                c++;
+            }
+        }
+        return c;
+    }
+}
