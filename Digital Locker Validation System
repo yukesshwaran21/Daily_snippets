@@ -1,0 +1,39 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int temp = n;
+
+        int sum = 0;
+        int freq[] = new int[10];
+        int evenCount = 0;
+
+        while(temp > 0) {
+            int d = temp % 10;
+
+            sum += d;
+
+            freq[d]++;
+            if(freq[d] > 1) {
+                System.out.println("LOCKED");
+                return;
+            }
+
+            if(d % 2 == 0) {
+                evenCount++;
+            }
+
+            temp = temp / 10;
+        }
+
+        if(sum % 3 == 0 && evenCount == 2) {
+            System.out.println("OPEN");
+        } else {
+            System.out.println("LOCKED");
+        }
+    }
+}
