@@ -1,0 +1,72 @@
+//Page 1
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <center>
+        <h1>Error Makes Clever Academy</h1>
+        <h2>Traning | Tech News | Freshers Guide</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error laudantium earum ipsum, quae voluptas veniam!</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FYErehuSuuw?si=u82Me1F2qmrRRSrP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam id delectus, vitae molestiae aliquam necessitatibus nulla. Doloribus modi itaque corrupti, explicabo consectetur quaerat nisi voluptas non adipisci reiciendis cumque. Quia perspiciatis iure praesentium, eaque nesciunt aut maxime velit quas porro laboriosam. Iure, quia quos impedit, illo sunt asperiores magni consectetur saepe cupiditate ex veritatis vero officia tempora animi, recusandae adipisci?</p>
+        </center>
+        <h1>Let's divide FullStack into 3 parts</h1>
+        <ul>
+            <li>FrontEnd</li>
+            <li>BackEnd</li>
+            <li>DataBase</li>
+        </ul>
+       <hr>
+       <center>
+        <a href="register.html">Register for a course</a>
+       </center>
+    </body>
+</html>
+
+//Page 2
+
+<!DOCTYPE html>
+<html>
+    <body>
+         <table >
+            <tr>
+                <th>Name</th>
+                <td><input type="text" placeholder="Enter your name"></td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td><input type="number" placeholder="Enter your age"></td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td><input type="radio" name="Gender">Male <input type="radio" name="Gender">Female</td>
+
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><input type="text" placeholder="Enter your address"></td>
+            </tr>
+            <tr>
+                <th>Department</th>
+                <td>
+                    <select name="" id="">
+                        <option value="">Python</option>
+                        <option value="">Java</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Resume</td>
+                <td><input type="file"></td>
+            </tr>
+            <tr>
+                <td><input type="submit"></td>
+                <td><input type="reset"></td>
+            </tr>
+        </table>
+    </body>
+</html>
