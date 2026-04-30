@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>EVENT</title>
+        <link rel="icon" href="img/date.png">
+    </head>
+    <body bgcolor="black" style="color: white;">
+        <center>
+            <h1>UPCOMING EVENTS 🗓️</h1>
+            <P>Don't miss any of your events</P>
+        </center>
+        <hr>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti velit rem vel hic laborum nihil corporis esse dolorum tenetur illum, asperiores excepturi saepe alias omnis eaque necessitatibus ullam fugiat porro sint deleniti quae numquam? Ipsum delectus obcaecati repellat eaque quas rerum facilis id, iste aut nam laborum ad, cupiditate, impedit dignissimos dolorem unde necessitatibus vero voluptate numquam. Dolorum, eum voluptates? Est ad error doloremque voluptate. Itaque autem, eveniet deleniti reiciendis tempora quo dolor voluptatum cumque placeat dolore reprehenderit praesentium tenetur temporibus voluptatibus voluptates soluta dolorem aliquam et hic laboriosam. Magni optio delectus ullam ducimus, cumque tenetur animi est itaque at?
+        </p>
+        <center>
+            <img src="img/event1.png" alt="event1">
+            <h1>Photo Gallery</h1>
+            <h2>Free Entry | Free Food | Pets are not allowed</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore itaque, dolores repellat quisquam nihil facilis perferendis tempora quasi. Nihil, esse commodi officiis eligendi quia dolorum vero error excepturi facilis delectus doloribus expedita placeat! Accusantium, ducimus natus ad, delectus deleniti atque harum, neque voluptates consequatur possimus laboriosam vel obcaecati exercitationem ea.</p>
+            <img src="img/event2.png" alt="event2"><br>
+            <h1>  <a href="https://www.myntra.com/nu-best-seller-styles">Myntra</a></h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt a dolorem officia enim, voluptatum hic molestias pariatur corrupti reiciendis doloremque odit mollitia rem laudantium nisi accusamus perferendis aperiam unde velit modi quae! Quae accusantium unde qui ullam illum quasi beatae quod non similique ipsam distinctio eligendi aut facere architecto, esse reprehenderit doloremque dolorem perferendis iusto harum eius soluta laboriosam. Mag
+                
+        </center>
+        <hr>
+        <center>
+           <h2>Contacts</h2>
+           <h3>1234567890 | asdjakae6@gmail.com</h3>
+        </center>
+    </body>
+</html>
