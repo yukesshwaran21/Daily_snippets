@@ -1,0 +1,32 @@
+class Solution {
+    public int smallestIndex(int[] nums) {
+
+        List<Integer> l=new ArrayList<>();
+        
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]<10){
+                if(nums[i]==i){
+                    l.add(i);
+                }
+            }
+            else{
+            int sum=0;
+            int k=nums[i];
+            while(k>0){
+                int d=k%10;
+                sum += d;
+                k=k/10;
+            }
+            if(sum==i){
+                l.add(i);
+            }
+            }
+        }
+        Collections.sort(l);
+        
+        for(int i=0;i<l.size();i++){
+            return l.get(0);
+        }
+        return -1;
+    }
+}
