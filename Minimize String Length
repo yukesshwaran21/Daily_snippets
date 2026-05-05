@@ -1,0 +1,13 @@
+class Solution {
+    public int minimizedStringLength(String s) {
+        
+        char[] arr=s.toCharArray();
+        Set<Character> l=new HashSet<>();
+
+        for(char c: arr){
+            l.add(c);
+        }
+    
+        return l.size();
+    }
+}
