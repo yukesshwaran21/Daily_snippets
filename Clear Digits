@@ -1,0 +1,16 @@
+class Solution {
+    public String clearDigits(String s) {
+        
+        StringBuilder b=new StringBuilder();
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(Character.isDigit(c)){
+                b.deleteCharAt(b.length()-1);
+            }
+            else{
+                b.append(c);
+            }
+        }
+        return b.toString();
+    }
+}
