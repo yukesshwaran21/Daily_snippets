@@ -1,0 +1,13 @@
+class Solution {
+
+    public String reversePrefix(String s, int k) {
+
+        String s1=s.substring(0,k);
+        StringBuilder b=new StringBuilder();
+        b.append(s1);
+        b.reverse().toString();
+        String s2=s.substring(k);
+    
+        return b+s2;
+    }
+}
