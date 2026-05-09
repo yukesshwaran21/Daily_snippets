@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>form</title>
+</head>
+<body>
+    <center>
+         <table class="t1">
+        <tr class="tr1">
+            <td class="td1"><h3>Name</h3></td>
+            <td class="td1"><input type="text" name="" id="name"></td>
+        </tr>
+        <tr class="tr1">
+            <td class="td1"><h3>Age</h3></td>
+            <td class="td1"><input type="number" id="age"></td>
+        </tr>
+        <tr class="tr1">
+            <td class="td1"><h3>Gender</h3></td>
+            <td class="td1">
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female
+            </td>
+        </tr>
+        <tr class="tr1">
+            <td class="td1"><h3>Course</h3></td>
+            <td class="td1">
+                <select name="" id="course">
+                    <option value="Java">Java</option>
+                    <option value="C">C</option>
+                    <option value="Python">Python</option>
+                </select>
+            </td>
+        </tr>
+        <tr class="tr1">
+            <td class="td1"><h3>E-mail</h3></td>
+            <td class="td1"><input type="email" name="" id="email"></td>
+        </tr>
+        <tr class="tr1">
+            <td colspan="2"><button id="sub" onclick="submit()">Submit</button></td>
+        </tr>
+     </table>
+
+
+     <table id="t2">
+        <tr>
+            <td class="td2"><h1>Name</h1></td>
+            <td class="td2"><h3>Age</h3></td>
+            <td class="td2"><h3>Gender</h3></td>
+            <td class="td2"><h3>Course</h3></td>
+            <td class="td2"><h3>E-mail</h3></td>
+            <td class="td2"><h3>Action</h3></td>
+        </tr>
+     </table>
+    </center>
+</body>
+<script>
+    function submit(){
+    var name=document.getElementById("name").value
+    var age=document.getElementById("age").value
+    var gender=document.querySelector('input[name="gender"]:checked').value
+    var course=document.getElementById("course").value
+    var email=document.getElementById("email").value
+    
+    var t2=document.getElementById("t2")
+    var row=document.createElement("tr")
+        row.innerHTML= `<td>${name}</td>
+        <td>${age}</td>
+        <td>${gender}</td>
+        <td>${course}</td>
+        <td>${email}</td>
+        <button onclick="delete1(event)">Delete</button>`
+
+        t2.append(row)
+    }
+
+     function delete1(event){
+
+        event.target.parentElement.parentElement.remove();
+
+    }
+
+</script>
+</html>
