@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>form</title>
+</head>
+<body>
+    <h1 id="h">Booksky</h1>
+    <div class="page">
+        <div class="con1">
+            <h1>OnePiece</h1>
+            <h2>ODA</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque possimus alias autem quas maiores dolores ipsam? Adipisci voluptatibus omnis ut!</p>
+            <button onclick="deleteitem(event)">Delete</button>
+        </div>
+    </div>
+    <div class="blank"></div>
+    <div class="pop">
+        <form action="">
+            <table>
+            <tr>
+                <td><h3>Book-Title</h3></td>
+                <td><input type="text" placeholder="Name of Book Title" id="book"></td>
+            </tr>
+            <tr>
+                <td><hr></td>
+                <td><hr></td>
+            </tr>
+            <tr>
+                <td><h3>Author</h3></td>
+                <td><input type="text" name="" id="author" placeholder="Author Name"></td>
+            </tr>
+            <tr>
+                <td><hr></td>
+                <td><hr></td>
+            </tr>
+            <tr>
+                <td><h3>Discription</h3></td>
+                <td><textarea name="" id="discrip" placeholder="Add Discription"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2"> <button id="add">Add</button></td>
+            </tr>
+        </table>
+        </form>
+    </div>
+    <button class="additem" onclick="show()"><h1>+</h1></button>
+    <div class="pic">
+    </div>
+</body>
+<script>
+    var blank=document.querySelector(".blank")
+    var pop=document.querySelector(".pop")
+    var pic=document.querySelector(".pic")
+    function show(){
+        blank.style.display="block"
+        pop.style.display="block"
+    }
+
+    var page=document.querySelector(".page")
+    var book=document.getElementById("book")
+    var author=document.getElementById("author")
+    var discrip=document.getElementById("discrip")
+    var add=document.getElementById("add")
+
+    add.addEventListener("click",function(){
+        event.preventDefault()
+        var div=document.createElement("div")
+        div.setAttribute("class","con1")
+        div.innerHTML=`<h1>${book.value}</h1>
+        <h2>${author.value}</h2>
+        <p>${discrip.value}</p>
+        <button onclick="deleteitem(event)">Delete</button>`
+        page.append(div)
+        blank.style.display="none"
+        pop.style.display="none"
+    })
+
+    function deleteitem(event){
+        event.target.parentElement.remove()
+    }
+</script> 
+</html>
