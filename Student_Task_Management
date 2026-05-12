@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="div1">
+       <center>
+         <table>
+            <tr>
+                <td><h3>Enter Title</h3></td>
+                <td><input type="text" name="" id="title"></td>
+            </tr>
+            <tr>
+                <td><h3>Priority</h3></td>
+                <td>
+                    <select name="" id="priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><h3>Date</h3></td>
+                <td><input type="date" name="" id="date"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="add1">Add</button></td>
+            </tr>
+        </table>
+       </center>
+    </div>
+    <div class="div2"></div>
+    <div class="store">
+        <div class="card"></div>
+    </div>
+    <div ><button class="div3" id="div3" onclick="show()">+</button></div>
+</body>
+<script>
+     var div3=document.getElementById("div3")
+     var div1=document.querySelector(".div1")
+     var div2=document.querySelector(".div2")
+    
+    function show(){
+        div1.style.display="block"
+        div2.style.display="block"
+    }
+
+    var add1=document.getElementById("add1")
+
+    add1.addEventListener("click",function(){
+
+        var store=document.querySelector(".store")
+        var card=document.querySelector(".card")
+
+        var title=document.getElementById("title").value
+        var priority=document.getElementById("priority").value
+        var date=document.getElementById("date").value
+ 
+        card.innerHTML=`<h3>${title}</h3>
+                        <h3>${priority}</h3>
+                        <h3>${date}</h3>`
+
+        div1.style.display="none"
+        div2.style.display="none"
+        
+    })
+
+
+</script>
+</html>
