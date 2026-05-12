@@ -1,0 +1,22 @@
+public class Codec {
+    
+    Map<Integer,String> map=new HashMap<>();
+    int i=0;
+    public String encode(String longUrl) {
+        map.put(i,longUrl);
+
+        String s="http://tinyurl.com/" + i;
+        i++;
+
+        return s;
+    }
+
+    public String decode(String shortUrl) {
+        
+        String arr[] = shortUrl.split("/");
+
+        int key = Integer.parseInt(arr[arr.length - 1]);
+
+        return map.get(key);
+    }
+}
