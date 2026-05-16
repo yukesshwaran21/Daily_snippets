@@ -1,0 +1,36 @@
+class Solution {
+    public String sortSentence(String s) {
+        
+        String[] arr=s.split(" ");
+        Map<Integer,String> m=new HashMap<>();
+
+        for(int i=0;i<arr.length;i++){
+            String c=arr[i];
+            for(int j=0;j<c.length();j++){
+                char k=c.charAt(j);
+                int n=0;
+                if(Character.isDigit(k)){
+                    n=k-'0';
+                    c = c.replace(k+"","");
+                    m.put(n,c);
+                }
+            }
+        }
+
+        for(int l:m.keySet()){
+            if(l>l+1){
+                int temp=l;
+                l=l+1;
+            }
+        }
+        StringBuilder b=new StringBuilder();
+        
+       for(int i=1;i<=m.size();i++){
+           b.append(m.get(i));
+           if(i<=m.size()-1){
+            b.append(" ");
+           }
+        }
+        return b.toString();
+    }
+}
