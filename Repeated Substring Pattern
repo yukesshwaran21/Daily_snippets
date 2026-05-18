@@ -1,0 +1,12 @@
+class Solution {
+    public boolean repeatedSubstringPattern(String s) {
+        
+       String c1=s+s;
+       c1=c1.substring(1,c1.length()-1);
+       if(c1.contains(s)){
+        return true;
+       }
+       return false;
+       
+    }
+}
