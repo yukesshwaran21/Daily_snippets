@@ -1,0 +1,17 @@
+class Solution {
+    public String restoreString(String s, int[] indices) {
+        
+        Map<Integer,Character> m=new HashMap<>();
+
+        for(int i=0;i<s.length();i++){
+            m.put(indices[i], s.charAt(i));
+        }
+    
+        StringBuilder b=new StringBuilder();
+
+        for(int k=0;k<indices.length;k++){
+                b.append(m.get(k));
+        }
+        return b.toString();
+    }
+}
