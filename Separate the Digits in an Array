@@ -1,0 +1,22 @@
+class Solution {
+    public int[] separateDigits(int[] nums) {
+        
+        List<Integer> l=new ArrayList<>();
+        StringBuilder b=new StringBuilder();
+        for(int i=0;i<nums.length;i++){
+            String n=String.valueOf(nums[i]);
+            if(n.length()<1){
+                for(int j=0;j<n.length();j++){
+                    b.append(n.charAt(j));
+                }
+            }
+            b.append(n);
+        }
+        int arr[]=new int[b.length()];
+        for(int i=0;i<arr.length;i++){
+            int m=b.charAt(i) - '0';
+            arr[i]=m;
+        }
+        return arr;
+    }
+}
