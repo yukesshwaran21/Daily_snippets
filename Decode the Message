@@ -1,0 +1,33 @@
+class Solution {
+    public String decodeMessage(String key, String message) {
+        
+        String arr[]=key.split(" ");
+        StringBuilder b=new StringBuilder();
+        for(String s: arr){
+            b.append(s);
+        }
+        String r=b.toString();
+        int index=0;
+        Map<Character,Character> m=new HashMap<>();
+        for(int i=0;i<r.length();i++){
+            char ch=r.charAt(i);
+            
+            if (!m.containsKey(ch)) {
+                char c = (char) ('a' + index);
+                m.put(ch, c);
+                index++;
+            }
+        }
+        StringBuilder res=new StringBuilder();
+        for(int i=0;i<message.length();i++){
+            char n=message.charAt(i);
+            if(n==' '){
+                res.append(' ');
+            }
+            else{
+                res.append(m.get(n));
+            }
+        }
+        return res.toString();
+    }
+}
