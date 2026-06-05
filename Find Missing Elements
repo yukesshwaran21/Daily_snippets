@@ -1,0 +1,24 @@
+class Solution {
+    public List<Integer> findMissingElements(int[] nums) {
+        
+        int min=Integer.MAX_VALUE;
+        int max=Integer.MIN_VALUE;
+        boolean b[]=new boolean[102];
+
+        for(int i:nums){
+            min=Math.min(min,i);
+            max=Math.max(max,i);
+            b[i]=true;
+        }
+
+        List<Integer> l=new ArrayList<>();
+
+        for(int i=min;i<max;i++){ 
+               if(!b[i]){
+                 l.add(i);
+               }
+        }
+        
+        return l;
+    }
+}
