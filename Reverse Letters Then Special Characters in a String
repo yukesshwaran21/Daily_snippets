@@ -1,0 +1,32 @@
+class Solution {
+    public String reverseByType(String s) {
+        
+        List<Character> l1 =new ArrayList<>();
+        List<Character> l2 =new ArrayList<>();
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+
+            if(Character.isLetter(c)){
+                l1.add(c);
+            }
+            else{
+                l2.add(c);
+            }
+        }
+        Collections.reverse(l1);
+        Collections.reverse(l2);
+
+        StringBuilder b=new StringBuilder();
+        int n=0,m=0;
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(Character.isLetter(c)){
+                b.append(l1.get(n++));
+            }
+            else{
+                b.append(l2.get(m++));
+            }
+        }
+        return b.toString();
+    }
+}
