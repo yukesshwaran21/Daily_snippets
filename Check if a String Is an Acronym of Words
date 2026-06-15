@@ -1,0 +1,21 @@
+class Solution {
+    public boolean isAcronym(List<String> words, String s) {
+        
+        char arr[] = s.toCharArray();
+        Boolean b=true;
+
+        if(words.size() != s.length()){
+            return false;
+        }
+        for(int i=0;i<words.size();i++){
+            if(words.get(i).charAt(0)!=arr[i]){
+                b=false;
+                break;
+            }
+        }
+        if(b){
+            return true;
+        }
+        return false;
+    }
+}
