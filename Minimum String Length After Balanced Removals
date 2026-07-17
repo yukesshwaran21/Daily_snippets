@@ -1,0 +1,18 @@
+class Solution {
+    public int minLengthAfterRemovals(String s) {
+        
+        int a=0,b=0;
+
+        for(char c:s.toCharArray()){
+            if(c=='a'){
+                a++;
+            }
+            else{
+                b++;
+            }
+        }
+        int max=Math.max(a,b);
+        int min=Math.min(a,b);
+        return max-min;
+    }
+}
