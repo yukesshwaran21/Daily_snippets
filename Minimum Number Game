@@ -1,0 +1,30 @@
+class Solution {
+    public int[] numberGame(int[] nums) {
+        
+        List<Integer> l=new ArrayList<>();
+
+        for(int i:nums){
+            l.add(i);
+        }
+
+        List<Integer> ar=new ArrayList<>();
+        
+        while(l.size()>0){
+            int a = Collections.min(l);
+            l.remove(Integer.valueOf(a));
+
+            int b = Collections.min(l);
+            l.remove(Integer.valueOf(b));
+
+            ar.add(b);
+            ar.add(a);
+            }
+
+        int arr[]=new int[ar.size()];
+
+        for(int i=0;i<ar.size();i++){
+            arr[i]=ar.get(i);
+        }
+        return arr;
+    }
+}
