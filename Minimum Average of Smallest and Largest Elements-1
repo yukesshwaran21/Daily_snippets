@@ -1,0 +1,21 @@
+class Solution {
+    public double minimumAverage(int[] nums) {
+        
+        List<Integer> l=new ArrayList<>();
+         List<Double> a=new ArrayList<>();
+
+        for(int i:nums){
+            l.add(i);
+        }
+        Collections.sort(l);
+
+        while(l.size()>0){
+                int n1=l.remove(0);
+                int n2=l.remove(l.size()-1);
+                double sum=(n1+n2)/2.0;
+                a.add(sum);
+        }
+        Collections.sort(a);
+        return a.get(0);
+    }
+}
