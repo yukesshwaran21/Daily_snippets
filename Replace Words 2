@@ -1,0 +1,26 @@
+class Solution {
+    public String replaceWords(List<String> dictionary, String sentence) {
+
+      Collections.sort(dictionary, (a, b) -> a.length() - b.length());
+
+      StringBuilder b=new StringBuilder();
+      String r[]=sentence.split("\\s+");
+
+      for(int i=0;i<r.length;i++){
+        boolean bl=false;
+        for(int j=0;j<dictionary.size();j++){
+            if(r[i].startsWith(dictionary.get(j))){
+                b.append(dictionary.get(j));
+                b.append(" ");
+                bl=true;
+                break;
+            }
+        }
+        if(!bl){
+            b.append(r[i]);
+            b.append(" ");
+           }
+      }
+      return b.toString().trim();
+    }
+}
